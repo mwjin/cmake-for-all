@@ -1,5 +1,10 @@
-cmake_minimum_required(VERSION 3.0.0)
-project(your_project VERSION 0.1.0)
+cmake_minimum_required(VERSION 3.11)
+project(
+    your_project
+    VERSION 0.1.0
+    DESCRIPTION "This is your project. Change on your own."
+    LANGUAGES CXX
+)
 
 include(CTest)
 enable_testing()
