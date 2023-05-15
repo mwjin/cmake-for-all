@@ -11,7 +11,9 @@ set(CMAKE_CXX_STANDARD 17)
 include(CTest)
 enable_testing()
 
+add_subdirectory(lib)
 add_executable(your_project main.cc)
+target_link_libraries(your_project shape)
 target_compile_options(your_project PUBLIC -Wall -Werror)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
