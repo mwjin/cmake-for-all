@@ -8,3 +8,14 @@ add_library(shape STATIC ${SRC_FILES})
 target_include_directories(shape PUBLIC ${CMAKE_SOURCE_DIR}/includes)
 
 target_compile_options(shape PRIVATE -Wall -Werror)
+
+# External Libraries
+include(FetchContent)
+FetchContent_Declare(
+  Fmt
+  GIT_REPOSITORY "https://github.com/fmtlib/fmt"
+  GIT_TAG "7.1.3"
+  )
+FetchContent_MakeAvailable(Fmt)
+
+target_link_libraries(shape PRIVATE fmt)
